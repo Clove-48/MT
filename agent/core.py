@@ -1,6 +1,7 @@
 """Agent core — Anthropic SDK call + tool loop."""
 
 import json
+import streamlit as st
 import os
 from anthropic import Anthropic
 
@@ -14,7 +15,7 @@ _client = None
 def _get_client() -> Anthropic:
     global _client
     if _client is None:
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        api_key = st.secrets["ANTHROPIC_API_KEY"]
         if not api_key:
             raise RuntimeError("请设置环境变量 ANTHROPIC_API_KEY")
         _client = Anthropic(api_key=api_key)
