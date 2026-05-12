@@ -1,0 +1,242 @@
+{
+  "act_001": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 30, "status": "available"},
+      {"time": "14:00", "remaining": 15, "status": "available"},
+      {"time": "16:00", "remaining": 5, "status": "limited"}
+    ]
+  },
+  "act_002": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 20, "status": "available"},
+      {"time": "13:00", "remaining": 12, "status": "available"},
+      {"time": "15:30", "remaining": 8, "status": "available"}
+    ]
+  },
+  "act_003": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 50, "status": "available"},
+      {"time": "13:00", "remaining": 45, "status": "available"},
+      {"time": "15:00", "remaining": 30, "status": "available"}
+    ]
+  },
+  "act_004": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "06:00", "remaining": -1, "status": "unlimited"},
+      {"time": "10:00", "remaining": -1, "status": "unlimited"},
+      {"time": "14:00", "remaining": -1, "status": "unlimited"}
+    ]
+  },
+  "act_005": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 6, "status": "limited"},
+      {"time": "14:00", "remaining": 4, "status": "limited"},
+      {"time": "16:00", "remaining": 8, "status": "available"}
+    ]
+  },
+  "act_006": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "09:30", "remaining": 100, "status": "available"},
+      {"time": "12:00", "remaining": 80, "status": "available"},
+      {"time": "14:00", "remaining": 60, "status": "available"}
+    ]
+  },
+  "act_007": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 15, "status": "available"},
+      {"time": "14:00", "remaining": 10, "status": "available"},
+      {"time": "16:30", "remaining": 8, "status": "available"}
+    ]
+  },
+  "act_008": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "09:30", "remaining": 200, "status": "available"},
+      {"time": "12:00", "remaining": 150, "status": "available"},
+      {"time": "14:00", "remaining": 100, "status": "available"}
+    ]
+  },
+  "act_009": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 3, "status": "limited"},
+      {"time": "14:00", "remaining": 2, "status": "limited"},
+      {"time": "17:00", "remaining": 5, "status": "limited"}
+    ]
+  },
+  "act_010": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "09:00", "remaining": 8, "status": "available"},
+      {"time": "11:00", "remaining": 6, "status": "available"},
+      {"time": "14:00", "remaining": 10, "status": "available"}
+    ]
+  },
+  "act_011": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 5, "status": "limited"},
+      {"time": "14:00", "remaining": 3, "status": "limited"},
+      {"time": "17:00", "remaining": 6, "status": "available"}
+    ]
+  },
+  "act_012": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": -1, "status": "unlimited"},
+      {"time": "14:00", "remaining": -1, "status": "unlimited"},
+      {"time": "18:00", "remaining": -1, "status": "unlimited"}
+    ]
+  },
+  "act_013": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "10:00", "remaining": 10, "status": "available"},
+      {"time": "14:00", "remaining": 6, "status": "available"},
+      {"time": "17:00", "remaining": 8, "status": "available"}
+    ]
+  },
+  "act_014": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "06:00", "remaining": -1, "status": "unlimited"},
+      {"time": "10:00", "remaining": -1, "status": "unlimited"},
+      {"time": "14:00", "remaining": -1, "status": "unlimited"}
+    ]
+  },
+  "act_015": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "09:30", "remaining": 40, "status": "available"},
+      {"time": "13:00", "remaining": 35, "status": "available"},
+      {"time": "16:00", "remaining": 25, "status": "available"}
+    ]
+  },
+  "rest_001": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:30", "remaining": 10, "status": "available"},
+      {"time": "12:00", "remaining": 4, "status": "limited"},
+      {"time": "18:00", "remaining": 8, "status": "available"}
+    ]
+  },
+  "rest_002": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 12, "status": "available"},
+      {"time": "12:30", "remaining": 6, "status": "available"},
+      {"time": "18:00", "remaining": 10, "status": "available"}
+    ]
+  },
+  "rest_003": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 8, "status": "available"},
+      {"time": "12:00", "remaining": 3, "status": "limited"},
+      {"time": "17:30", "remaining": 10, "status": "available"}
+    ]
+  },
+  "rest_004": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 10, "status": "available"},
+      {"time": "12:30", "remaining": 5, "status": "available"},
+      {"time": "18:30", "remaining": 8, "status": "available"}
+    ]
+  },
+  "rest_005": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:30", "remaining": 4, "status": "limited"},
+      {"time": "13:00", "remaining": 2, "status": "limited"},
+      {"time": "18:00", "remaining": 6, "status": "available"}
+    ]
+  },
+  "rest_006": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 6, "status": "available"},
+      {"time": "12:00", "remaining": 3, "status": "limited"},
+      {"time": "17:30", "remaining": 8, "status": "available"}
+    ]
+  },
+  "rest_007": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:30", "remaining": 12, "status": "available"},
+      {"time": "12:30", "remaining": 8, "status": "available"},
+      {"time": "18:00", "remaining": 10, "status": "available"}
+    ]
+  },
+  "rest_008": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 8, "status": "available"},
+      {"time": "12:30", "remaining": 5, "status": "available"},
+      {"time": "18:30", "remaining": 6, "status": "available"}
+    ]
+  },
+  "rest_009": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 10, "status": "available"},
+      {"time": "12:00", "remaining": 6, "status": "available"},
+      {"time": "17:30", "remaining": 12, "status": "available"}
+    ]
+  },
+  "rest_010": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 15, "status": "available"},
+      {"time": "12:30", "remaining": 10, "status": "available"},
+      {"time": "18:00", "remaining": 12, "status": "available"}
+    ]
+  },
+  "rest_011": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 8, "status": "available"},
+      {"time": "12:00", "remaining": 4, "status": "limited"},
+      {"time": "18:00", "remaining": 10, "status": "available"}
+    ]
+  },
+  "rest_012": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:30", "remaining": 10, "status": "available"},
+      {"time": "12:30", "remaining": 7, "status": "available"},
+      {"time": "18:00", "remaining": 9, "status": "available"}
+    ]
+  },
+  "rest_013": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:30", "remaining": 2, "status": "limited"},
+      {"time": "13:00", "remaining": 1, "status": "limited"},
+      {"time": "18:30", "remaining": 2, "status": "limited"}
+    ]
+  },
+  "rest_014": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 20, "status": "available"},
+      {"time": "12:00", "remaining": 15, "status": "available"},
+      {"time": "18:00", "remaining": 20, "status": "available"}
+    ]
+  },
+  "rest_015": {
+    "date": "2026-05-12",
+    "slots": [
+      {"time": "11:00", "remaining": 10, "status": "available"},
+      {"time": "12:30", "remaining": 8, "status": "available"},
+      {"time": "18:00", "remaining": 10, "status": "available"}
+    ]
+  }
+}
