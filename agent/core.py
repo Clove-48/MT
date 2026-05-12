@@ -3,7 +3,7 @@
 import json
 import streamlit as st
 import os
-from anthropic import Anthropic
+from anthropic import Anthropic, APIError
 
 from .tool_definitions import TOOLS
 from .tool_handlers import HANDLERS
@@ -15,9 +15,20 @@ _client = None
 def _get_client() -> Anthropic:
     global _client
     if _client is None:
-        api_key = st.secrets["ANTHROPIC_API_KEY"]
+        api_key = None
+        
+        if hasattr(st, 'secrets'):
+            api_key = st.secrets.get("ANTHROPIC_API_KEY", "").strip()
+        
         if not api_key:
-            raise RuntimeError("请设置环境变量 ANTHROPIC_API_KEY")
+            api_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
+        
+        if not api_key:
+            raise RuntimeError("请在 Streamlit Secrets 或环境变量中设置 ANTHROPIC_API_KEY")
+        
+        if not api_key.startswith("sk-"):
+            raise RuntimeError(f"无效的 API 密钥格式：密钥应以 'sk-' 开头")
+        
         _client = Anthropic(api_key=api_key)
     return _client
 

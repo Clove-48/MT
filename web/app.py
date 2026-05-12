@@ -218,8 +218,24 @@ def _extract_bookings_from_text(full_response: str):
     })
 
 
-# ── Sidebar ────────────────────────────────────────────────
+# ── Debug Info (Hidden in sidebar) ─────────────────────────
 with st.sidebar:
+    with st.expander("🔧 调试信息", expanded=False):
+        secret_key = st.secrets.get("ANTHROPIC_API_KEY", "") if hasattr(st, 'secrets') else ""
+        env_key = os.getenv("ANTHROPIC_API_KEY", "")
+        
+        st.markdown(f"**Secrets 配置**: {'✅ 已配置' if secret_key else '❌ 未配置'}")
+        st.markdown(f"**环境变量**: {'✅ 已配置' if env_key else '❌ 未配置'}")
+        
+        if secret_key:
+            st.markdown(f"**密钥长度**: {len(secret_key)} 字符")
+            st.markdown(f"**密钥格式**: {'✅ 正确 (sk-开头)' if secret_key.startswith('sk-') else '❌ 错误'}")
+        elif env_key:
+            st.markdown(f"**密钥长度**: {len(env_key)} 字符")
+            st.markdown(f"**密钥格式**: {'✅ 正确 (sk-开头)' if env_key.startswith('sk-') else '❌ 错误'}")
+
+    st.divider()
+
     st.markdown("#### 💡 试试这些场景")
     examples = [
         ("👨‍👩‍👧 家庭出游", "今天下午想带老婆和5岁孩子出去玩，别离家太远，老婆在减肥要吃得健康"),
