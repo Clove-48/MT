@@ -511,8 +511,12 @@ if user_input:
                 elif event["type"] == "done":
                     break
 
-        except Exception as e:
+        except RuntimeError as e:
             stream_error = str(e)
+            if "认证失败" in str(e) or "invalid" in str(e).lower():
+                stream_error = f"❌ 认证错误：{str(e)}\n\n可能的原因：\n1. API 密钥已过期或被撤销\n2. 密钥输入有误（请检查是否有多余空格）\n3. Anthropic 服务暂时故障\n\n请访问 https://console.anthropic.com/ 检查您的 API 密钥状态。"
+        except Exception as e:
+            stream_error = f"未知错误：{str(e)}\n\n错误类型：{type(e).__name__}"
 
         # Always show response (even if partial)
         if full_response:

@@ -3,7 +3,7 @@
 import json
 import streamlit as st
 import os
-from anthropic import Anthropic, APIError
+from anthropic import Anthropic, APIError, AuthenticationError
 
 from .tool_definitions import TOOLS
 from .tool_handlers import HANDLERS
@@ -31,6 +31,23 @@ def _get_client() -> Anthropic:
         
         _client = Anthropic(api_key=api_key)
     return _client
+
+
+def run_agent_with_retry(user_message: str, chat_history: list[dict] = None,
+                         model: str = "claude-sonnet-4-6", max_retries: int = 2) -> str:
+    """Run agent with retry logic for authentication errors."""
+    global _client
+    
+    for attempt in range(max_retries):
+        try:
+            return run_agent(user_message, chat_history, model)
+        except AuthenticationError as e:
+            if attempt < max_retries - 1:
+                _client = None
+                continue
+            raise RuntimeError(f"认证失败：{str(e)}。请检查您的 API 密钥是否正确且未过期。")
+        except APIError as e:
+            raise RuntimeError(f"API 调用失败：{str(e)}")
 
 
 def run_agent(user_message: str, chat_history: list[dict] = None,
