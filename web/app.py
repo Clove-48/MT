@@ -6,6 +6,12 @@ import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from agent.core import run_agent_streaming
 from web.components import render_trip_dashboard
 
@@ -221,8 +227,14 @@ def _extract_bookings_from_text(full_response: str):
 # ── Debug Info (Hidden in sidebar) ─────────────────────────
 with st.sidebar:
     with st.expander("🔧 调试信息", expanded=False):
-        secret_key = st.secrets.get("ANTHROPIC_API_KEY", "") if hasattr(st, 'secrets') else ""
-        env_key = os.getenv("ANTHROPIC_API_KEY", "")
+        secret_key = ""
+        try:
+            if hasattr(st, 'secrets'):
+                secret_key = st.secrets.get("ANTHROPIC_API_KEY", "").strip() if hasattr(st.secrets, 'get') else ""
+        except Exception:
+            secret_key = ""
+        
+        env_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
         
         st.markdown(f"**Secrets 配置**: {'✅ 已配置' if secret_key else '❌ 未配置'}")
         st.markdown(f"**环境变量**: {'✅ 已配置' if env_key else '❌ 未配置'}")

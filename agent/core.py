@@ -17,8 +17,14 @@ def _get_client() -> Anthropic:
     if _client is None:
         api_key = None
         
-        if hasattr(st, 'secrets'):
-            api_key = st.secrets.get("ANTHROPIC_API_KEY", "").strip()
+        try:
+            if hasattr(st, 'secrets'):
+                if hasattr(st.secrets, 'get'):
+                    api_key = st.secrets.get("ANTHROPIC_API_KEY", "").strip()
+                else:
+                    api_key = st.secrets["ANTHROPIC_API_KEY"].strip() if "ANTHROPIC_API_KEY" in st.secrets else ""
+        except Exception:
+            pass
         
         if not api_key:
             api_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
